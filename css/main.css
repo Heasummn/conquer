@@ -1,0 +1,445 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?16071457");
+  src: url("../font/fontello.eot?16071457#iefix") format("embedded-opentype"), url("../font/fontello.woff2?16071457") format("woff2"), url("../font/fontello.woff?16071457") format("woff"), url("../font/fontello.ttf?16071457") format("truetype"), url("../font/fontello.svg?16071457#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?16071457#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-menu:before {
+  content: '\f0c9'; }
+
+/* '' */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+  margin: 0; }
+
+body {
+  color: #333333; }
+
+ul {
+  list-style: none;
+  padding-left: 0; }
+
+a {
+  text-decoration: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+.background {
+  display: block;
+  width: 100%; }
+
+nav {
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  background-color: #383e4c;
+  color: white;
+  padding: 9px 1em 1em;
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 769px) and (max-width: 991px) {
+    nav {
+      padding: 9px 1em; } }
+  nav #navbar-toggle {
+    display: none; }
+  nav div {
+    margin-right: auto;
+    margin-left: auto; }
+  nav #navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    nav #navigation li {
+      border: solid 1px #676d7b;
+      padding: 13px 25px;
+      margin: 0 10px;
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      font-size: 1.25em;
+      line-height: 1.25em; }
+      @media (min-width: 769px) and (max-width: 991px) {
+        nav #navigation li {
+          padding: 10px 20px;
+          font-size: 1em; } }
+    nav #navigation a {
+      color: white; }
+  @media (max-width: 768px) {
+    nav {
+      background: transparent; }
+      nav #navbar-toggle {
+        display: initial;
+        cursor: pointer;
+        position: absolute;
+        background-color: #383e4c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 4px 8px;
+        right: 15px; }
+      nav #navigation {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.8s ease-in-out;
+        width: 95vw;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        background-color: #383e4c; }
+        nav #navigation li {
+          font-size: 1em;
+          padding: none;
+          border: none;
+          width: 100%;
+          text-align: center;
+          border-bottom: 1px solid #676d7b; }
+      nav.navbar-show #navigation {
+        max-height: 300px; } }
+
+header .title {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: white; }
+  header .title h1 {
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black; }
+  header .title h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.1;
+    text-shadow: 1px, 1px, #333333; }
+  @media (max-width: 768px) {
+    header .title h1 {
+      font-size: 50px; }
+    header .title h4 {
+      font-size: 18px; } }
+
+.center-over-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.container {
+  padding: 0 20px 10px; }
+
+.title {
+  color: white;
+  text-align: center; }
+
+#about-us {
+  display: flex;
+  justify-content: center;
+  text-align: left; }
+  #about-us h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 20px;
+    margin-bottom: 10px; }
+  #about-us p {
+    font-size: 14px;
+    line-height: 1.6em; }
+
+.grid-6, .grid-4 {
+  display: grid;
+  width: 1140px;
+  grid-gap: 30px; }
+  .grid-6 *, .grid-4 * {
+    margin-left: auto;
+    margin-right: auto; }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .grid-6, .grid-4 {
+      width: 950px; } }
+  @media (min-width: 769px) and (max-width: 991px) {
+    .grid-6, .grid-4 {
+      width: 700px; } }
+  @media (max-width: 768px) {
+    .grid-6, .grid-4 {
+      width: 500px; } }
+
+.grid-6 {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  grid-template-columns: repeat(6, 1fr); }
+  @media (max-width: 768px) {
+    .grid-6 {
+      grid-template-columns: 1fr; } }
+  .grid-6 div {
+    background-color: #f2f2f2; }
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr); }
+  @media (min-width: 769px) and (max-width: 991px) {
+    .grid-4 {
+      grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 768px) {
+    .grid-4 {
+      grid-template-columns: 1fr; } }
+  .grid-4 div {
+    background-color: #f2f2f2; }
+
+.intro {
+  position: relative;
+  overflow: hidden; }
+
+.green {
+  color: #178a27; }
+
+.blue {
+  color: #1686c1; }
+
+.gray {
+  color: #666666; }
+
+.content-image {
+  width: auto; }
+  .content-image img {
+    width: 100%;
+    height: auto; }
+
+#bootstrap {
+  max-width: 360px;
+  grid-column: 1 / span 2; }
+  @media (max-width: 768px) {
+    #bootstrap {
+      grid-column: 1 / -1; } }
+
+#responsive {
+  max-width: 360px;
+  grid-column: 3 / span 2; }
+  @media (max-width: 768px) {
+    #responsive {
+      grid-column: 1 / -1; } }
+
+#parallax {
+  max-width: 360px;
+  grid-column: 5 / span 2; }
+  @media (max-width: 768px) {
+    #parallax {
+      grid-column: 1 / -1; } }
+
+.blog {
+  width: auto;
+  line-height: 1.6em; }
+  .blog h2 {
+    text-align: center;
+    padding-bottom: 20px; }
+  .blog img {
+    width: 100%; }
+
+#twoleft {
+  grid-column: 1 / span 3; }
+  @media (max-width: 768px) {
+    #twoleft {
+      grid-column: 1 / -1; } }
+
+#tworight {
+  grid-column: 4 / span 3; }
+  @media (max-width: 768px) {
+    #tworight {
+      grid-column: 1 / -1; } }
+
+#service-intro h1 {
+  font-size: 36px;
+  font-weight: 500;
+  text-shadow: 2px 2px #aaa;
+  line-height: 1.1;
+  margin: 20px 0; }
+
+#service-intro p {
+  font-size: 18px;
+  line-height: 1.6em; }
+
+#our-services {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  margin-bottom: 4em; }
+
+.link-more {
+  display: inline-block;
+  margin-top: 1em;
+  background: white;
+  padding: 10px 30px;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  transition: background 0.3s ease; }
+  .link-more:hover {
+    background: #E6E6E6; }
+
+#col-one, #col-two, #col-three, #col-four {
+  width: auto;
+  max-width: 260px; }
+  #col-one .container, #col-two .container, #col-three .container, #col-four .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  #col-one h3, #col-two h3, #col-three h3, #col-four h3 {
+    text-align: center;
+    margin: 10px 0; }
+  #col-one p, #col-two p, #col-three p, #col-four p {
+    font-size: 14px;
+    line-height: 1.6em; }
+
+#large-col {
+  width: auto;
+  grid-column: 1 / -1; }
+  #large-col h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 1.5em 0 0.75em; }
+  #large-col p {
+    font-size: 14px;
+    line-height: 1.6em;
+    margin-bottom: 10px; }
+
+#contact img {
+  width: 100%; }
+
+#contact h1 {
+  text-shadow: 2px 2px #333;
+  font-size: 36px;
+  font-weight: 500; }
+
+#contact p {
+  margin: 20px 0;
+  padding: 1.5em 1em; }
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  #contact p {
+    margin: 10px 0;
+    font-size: 14px; } }
+
+@media (min-width: 769px) and (max-width: 991px) {
+  #contact p {
+    margin: 10px 0;
+    font-size: 12px; }
+  #contact h1 {
+    font-size: 30px; } }
+
+@media (max-width: 768px) {
+  #contact p {
+    margin: 3px 0;
+    font-size: 12px; }
+  #contact h1 {
+    font-size: 25px; } }
+
+#contact-text {
+  width: 50%; }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    #contact-text {
+      width: 65%; } }
+  @media (min-width: 769px) and (max-width: 991px) {
+    #contact-text {
+      width: 85%; } }
+  @media (max-width: 768px) {
+    #contact-text {
+      width: 100%; } }
+
+.transparent-gray {
+  border: none;
+  color: black;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  background: rgba(242, 242, 242, 0.4); }
+
+#contact-form form {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr; }
+
+#contact-form #subject {
+  grid-column: 1/ -1; }
+
+#contact-form #message {
+  grid-column: 1 / 3; }
+
+#contact-form button {
+  width: 40%;
+  border-radius: 10px;
+  border: none; }
+
+@media (min-width: 769px) and (max-width: 991px) {
+  #contact-form form {
+    grid-gap: 5px; }
+    #contact-form form input, #contact-form form textarea {
+      font-size: 14px; } }
+
+@media (max-width: 768px) {
+  #contact-form form {
+    grid-gap: 5px; }
+    #contact-form form input, #contact-form form textarea {
+      font-size: 12px; } }
+
+#footer {
+  text-align: center;
+  font-style: italic; }
+  #footer h1 {
+    font-weight: 500;
+    font-size: 1.7em;
+    margin: 1em 0; }
+  #footer p {
+    margin: 1.8em 0;
+    font-weight: 400;
+    font-size: 0.9em; }
+  #footer footer {
+    margin: 1em;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal; }
